@@ -1,0 +1,309 @@
+# class Doctor:
+#     def __init__(self):
+#         self.specialization
+#         self.patent
+#         self.activity  
+
+# class Administrator:
+#     def __init__(self):
+#         pass
+
+# class Doctoradministrator:
+#     def __init__(self):
+#         pass
+
+#     def treat():
+#         pass
+
+
+# hyerchical enheritanse
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#     def display(self):
+#         print(self.name)
+#         print(self.age)
+
+# class undergraduatestude(Person):
+#     def __init__(self,name,age,degree,year):
+#         super().__init__(name,age)
+#         self.degree=degree
+#         self.year=year
+
+#     def display(self):
+#         super().display(self)
+#         print(self.degree)
+#         print(self.year)
+
+# class Graduate(Person):
+
+#     def __init__(self,name,age,specialization):
+#         super().__init__(name,age)
+#         self.degree=degree   
+#         self.year=year 
+  
+#     def academy():
+
+    
+# multipe enheritance
+# hybrid enheritance 
+
+
+
+#23/01/2026****************************************
+
+
+
+# class Student:
+#     def __init__(self,name,rollno,grade,city):
+#         self.name=name
+#         self.rollno=rollno
+#         self.grade=grade
+#         self.city=city
+#     def display(self):
+#         print(self.name)
+#         print(self.rollno)
+#         print(self.grade)
+#         print(self.city)
+# s=Student("sandeep",23,'A','pune')
+# s.display()
+
+
+
+
+
+# class UdirectedGraph:
+#     def __init__(self):
+#         self.graph={}
+    
+#     def add_vertex(self,vertex):
+#         if vertex not in self.graph:
+#             self.graph[vertex]=[]
+#     def add_edge(self,vertex1,vertex2):
+#         if vertex1 not in self.graph:
+#             self.add_vertex(vertex1)
+#         if vertex2 not in self.graph:
+#             self.add_vertex(vertex2)
+#         self.graph[vertex1].append(vertex2)
+#         self.graph[vertex2].append(vertex1)
+#     def display(self):
+#         print(self.graph)
+
+# u=UdirectedGraph()
+# u.add_edge("v1","v2")
+# u.add_edge("v1","v3")
+# u.add_edge("v3","v4")
+# u.add_edge("v2","v4")
+
+# u.display()
+
+
+
+# class sample:
+#     def __init__(self,a,b):
+#         self.a=a
+#         self.b=b
+#     def display(self):
+#         print(self.a,self.b)
+
+# p=sample(5,6)
+# q=p
+
+# print(id(p))t
+# print(id(q))
+# In Python, variables do NOT store other variables’ addresses.
+# 👉 Variables store references to objects.
+
+
+# class FacebookFredRecom:
+#     def __init__(self):
+#         self.graph={}
+
+#     def AddVertices(self,Vertices):
+#         if Vertices not in self.graph:
+#             self.graph[Vertices]=[]
+#     def AddEdge(self,V1,V2):
+#         if V1 not in self.graph:
+#             self.AddVertices(V1)
+#         if V2 not in self.graph:
+#             self.AddVertices(V2)
+#         self.graph[V1].append(V2)
+#         self.graph[V2].append(V1)
+#     def display(self):
+#         print(self.graph)
+#     def recomend(self,Vertices):
+#         if Vertices in self.graph:
+#             for v in self.graph[Vertices]:
+#                 for vr in self.graph[v]:
+#                     if vr in self.graph and vr!=Vertices:
+#                         print("Recommend",vr)
+
+
+# obj=FacebookFredRecom()
+# obj.AddEdge("sandeep","gagan")
+# obj.AddEdge("gagan","lulu")  
+
+# obj.display()
+# obj.recomend("sandeep")
+
+################################  26
+
+# class parentClass:
+#     def __init__(self):
+#         print("parent class constrructor")
+#     def display1(self):
+#         print("parent class")
+# class DerivedClass(parentClass):
+#     def __init__(self):
+#         super().__init__()
+#         print('child class constructor')
+#     def display2(self):
+#         super().display1()
+#         print("child class ")
+
+# obj=DerivedClass()
+# print(obj)
+# obj.display1()
+# obj.display2()
+
+
+
+# class person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#     def display1(self):
+#         print(self.name)
+#         print(self.age)
+# class company_details(person):
+#     def __init__(self,name,age,salary,designation):
+#         super().__init__(name,age)
+#         self.salary=salary
+#         self.designation=designation
+#     def display2(self):
+#         super().display1()
+#         print(self.salary)
+#         print(self.designation) 
+
+# obj=company_details("mayur",29,50000,"DS")
+# obj.display2()            
+
+
+
+# class employee:
+#     def __init__(self,salary):
+#         self.salary=salary
+    
+#     def display(self):
+#         print(self.salary)
+
+# class manager(employee):
+#     def __init__(self, salary,bonous):
+#         super().__init__(salary)      ######### here supinit is requare other wise .display dont fetch salary
+#         self.bonous=bonous
+#     def display1(self):
+#         super().display()
+#         print('bonus is',self.bonous)
+# obj=manager(20200,10000)
+# obj.display1()
+
+
+# MULTILEVEL INHERITANCE 
+
+
+# class person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#     def display1(self):
+#         print(self.name)
+#         print(self.age)
+# class student(person):
+#     def __init__(self, name, age,rollno,grade):
+#         super().__init__(name, age)
+#         self.rollno=rollno
+#         self.grade=grade
+#     def display2(self):
+#         super().display1()
+#         print(self.rollno)
+#         print(self.grade)
+
+# class Graduate(student):
+#     def __init__(self, name, age, rollno, grade,degree):
+#         super().__init__(name, age, rollno, grade)
+#         self.degree=degree
+#     def display3(self):
+#         super().display2()
+#         print(self.degree)
+
+# obj=Graduate("sandeeep",23,100,'A','Btech')
+# obj.display3()
+
+
+# MULTIPLE INHERITANCE
+
+
+# class Academic:
+#     def __init__(self,grade,subject):
+#         self.grade=grade
+#         self.subject=subject
+#     def display(self):
+#         print(self.grade)
+#         print(self.subject)
+# class cocoricular:
+#     def __init__(self,activity,award):
+#         self.activity=activity
+#         self.award=award
+#     def dispaly1(self):
+#         print(self.activity)
+#         print(self.award)
+# class student(Academic,cocoricular):
+#     def __init__(self, grade, subject,activity,award,name,rollno):
+#         self.name=name
+#         self.rollno=rollno
+#         Academic.__init__(self,grade, subject)
+#         cocoricular.__init__(self,activity,award)
+#     def display2(self):
+#         Academic.display(self)
+#         cocoricular.dispaly1(self)
+#         print(self.name)
+#         print(self.rollno)
+
+# obj=student('a','english','runnning','1st chsampion','kitu',256)
+# obj.display2()
+
+
+# HIERARCHICAL INHERITANCE
+
+# class person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#     def dispaly(self):
+#         print(self.name)
+#         print(self.age)
+
+# class undergraduate(person):
+#     def __init__(self, name, age,degree,year):
+#         super().__init__(name, age)
+#         self.degree=degree
+#         self.year=year
+#     def dispaly1(self):
+#         super().dispaly()
+#         print(self.degree)
+#         print(self.year)
+
+# class graduate(person):
+#     def __init__(self, name, age,specialization):
+#         super().__init__(name, age)
+#         self.specialization=specialization
+#     def dispaly2(self):
+#         super().dispaly()
+#         print(self.specialization)
+
+# obj=undergraduate('sandeep',23,'Btech',2024) 
+# obj.dispaly1()
+# p=graduate('sandeep',25,'ETC')
+# p.dispaly2()
